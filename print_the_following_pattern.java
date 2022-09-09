@@ -10,7 +10,10 @@ class Pattern5
         {
             for(int j=1;j<=n;j++)
             {
-                System.out.print((char)(64+i)+" ");
+                if(i==j)
+                System.out.print("0");
+                else
+                System.out.print("x");
             }
             System.out.println( );
         }
