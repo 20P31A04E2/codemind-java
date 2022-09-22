@@ -1,25 +1,23 @@
 import java.util.Scanner;
-class Mini
+class Array
 {
     public static void main(String args[])
+{
+    Scanner sc = new Scanner(System.in);
+    int n,x[],i;
+    n=sc.nextInt();
+    x=new int[n];
+    for(i=0;i<n;i++)
     {
-        int n,i,x[],count=0;
-        Scanner sc = new Scanner (System.in);
-        n=sc.nextInt();
-        x=new int[n];
-        for(i=0;i<n;i++)
-        {
-            x[i]=sc.nextInt();
-        }
-        for(i=0;i<n;i++)
-        {
-            if(x[i]%2!=0)
-
-                {
-                    count=i;
-                }
-            
-        }
-        System.out.println(count);
+        x[i]=sc.nextInt();
     }
+    for(i=n-1;i>=0;i--)
+    {
+        if(x[i]%2!=0)
+        {
+             System.out.println(i);
+             break;
+        }
+    }
+}
 }
