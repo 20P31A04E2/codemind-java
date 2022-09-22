@@ -1,9 +1,9 @@
 import java.util.Scanner;
-class Mini
+class Array
 {
     public static void main(String args[])
     {
-        int n,i,x[],count=0;
+        int n,x[],count=0,i;
         Scanner sc = new Scanner (System.in);
         n=sc.nextInt();
         x=new int[n];
@@ -16,9 +16,7 @@ class Mini
             if(x[i]%2==0 && x[i+2]%2==0)
             {
                 if(x[i+1]%2==0)
-                {
-                    count++;
-                }
+                count++;
             }
         }
         System.out.println(count);
