@@ -1,40 +1,39 @@
 import java.util.Scanner;
-class Primes
+class prime
 {
     public static boolean isprime(int n)
     {
-        int count=0;
+        if(n==1)
+        return false;
         for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
             if(n%i==0)
-            count++;
+            return false;
         }
-        if(count==0)
         return true;
-        else
-        return false;
     }
-    public static int rev(int n)
+    public static int palindrome(int n)
     {
-        int sum=0,temp=n,r;
+        int r=0,d=0,temp=n;
         while(n>0)
         {
             r=n%10;
-            sum=sum*10+r;
+            d=(d*10)+r;
             n=n/10;
         }
-        return sum;
+        return d;
     }
     public static void main(String args[])
     {
+        int n,i,temp=0;
         Scanner sc = new Scanner(System.in);
-        int a;
-        a=sc.nextInt();
-        if(!isprime(a))
-        System.out.println("not prime");
-        else if(isprime(rev(a)))
+        n=sc.nextInt();
+        temp=palindrome(n);
+        if(isprime(n) && isprime(temp))
         System.out.println("circular prime");
-        else
+        else if(isprime(n) && !isprime(temp))
         System.out.println("prime but not a circular prime");
+        else
+        System.out.println("not prime");
     }
 }
