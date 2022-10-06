@@ -1,18 +1,19 @@
 import java.util.Scanner;
-class Pattern5
+class Pattern 
 {
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
-        int n;
+        int n,i;
+        Scanner sc = new Scanner(System.in);
         n=sc.nextInt();
-        for(int i=n;i>=1;i--)
+        while(n>0)
         {
-            for(int j=n;j>=1;j--)
+            for(i=1;i<=n;i++)
             {
-                System.out.print(j+" ");
+                System.out.print(i);
             }
-            System.out.println( );
+            System.out.println();
+            n--;
         }
     }
 }
