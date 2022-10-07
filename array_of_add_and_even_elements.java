@@ -1,9 +1,9 @@
 import java.util.Scanner;
-class ele
+class Ele
 {
-    public static void main(String args[])
+    public static void main (String args[])
     {
-        int n,x[],i;
+        int n,x[],i,a,b,count=0;
         Scanner sc = new Scanner (System.in);
         n=sc.nextInt();
         x=new int[n];
@@ -13,13 +13,13 @@ class ele
         }
         for(i=0;i<n;i++)
         {
-        if(x[i]%2!=0)
-        System.out.print(x[i]+" ");
+            if(x[i]%2!=0)
+            System.out.print(x[i]+" ");
         }
         for(i=0;i<n;i++)
         {
-        if(x[i]%2==0)
-        System.out.print(x[i]+" ");
+            if(x[i]%2==0)
+            System.out.print(x[i]+" ");
         }
     }
 }
